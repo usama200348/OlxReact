@@ -1,0 +1,22 @@
+/* detail.css */
+
+body {
+    color: black;
+  }
+  
+  .description {
+    display: flex;
+    color: black;
+    border: 3px solid black;
+    width: 100%;
+  }
+  
+  .library {
+    border: 3px solid black;
+    border-radius: 55px;
+  }
+  
+  .fbImages img {
+    height: 200px; /* Set the desired height */
+    width: auto; /* Maintain aspect ratio */
+  }

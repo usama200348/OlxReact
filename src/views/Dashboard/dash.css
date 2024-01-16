@@ -1,0 +1,22 @@
+
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
+  
+  .marquee-content {
+    animation: marquee-animation 10s linear infinite;
+    display: inline-block;
+    color: black;
+}
+  
+  @keyframes marquee-animation {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
