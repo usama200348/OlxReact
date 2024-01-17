@@ -22,7 +22,7 @@ function Dashboard() {
   };
 
   if (!products.length) {
-    return <div style={{ color: 'black' }}><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_5bvwGEJ3vGsEPkwzTT8v5hx6FIx6BKgY4AFmYza8ZMolX1hbK_SuYchaP63LSUZK7zo&usqp=CAU' alt='loading'/> </div>;
+    return <div style={{ color: 'black' }}><img src='https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif' alt='loading'/> </div>;
   }
   const { category } = products
 

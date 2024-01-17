@@ -29,7 +29,7 @@ function Detail() {
     if (Object.keys(singleProduct).length === 0) {
         return (
             <div >
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_5bvwGEJ3vGsEPkwzTT8v5hx6FIx6BKgY4AFmYza8ZMolX1hbK_SuYchaP63LSUZK7zo&usqp=CAU'/> 
+<img src='https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif'/> 
                 </div>
         );
     }
@@ -44,7 +44,7 @@ function Detail() {
          <FbImageLibrary className='fbImages'  images={images}  />
        </div>
            <h3 className='price'>{price}</h3>
-
+           <h3 style={{color:'black'}}>Detail :</h3>
     <p className='description'>{description}</p>
  {/* <p>{desciption}</p> */}
         </div>

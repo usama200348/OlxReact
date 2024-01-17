@@ -1,0 +1,20 @@
+body{
+    background-image: url('./aaset/login.avif');
+    background-color: aqua;
+}
+
+.header{
+    margin-top: -16%;
+}
+
+input{
+    align-items: center;
+    display: block;
+    padding-left: 23px;
+}
+
+.text:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: black;
+}

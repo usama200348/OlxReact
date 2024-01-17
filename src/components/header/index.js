@@ -6,7 +6,7 @@ import { SearchInputCountry } from '../../views/SearchInput';
 import { Login } from '../../Login';
 import { Register } from '../../Register';
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import logo from './assets/olx_logo.png';
 import carLogo from './assets/electric-car.png';
 import propertyLogo from './assets/apartment.png';
@@ -38,15 +38,11 @@ function Header() {
         <SearchInputCategory />
       </div>
       <div className="user-actions">
-        {/* <a href='{Login}' className="login" >
+        <a href='./Login'  className="login" >
           Login
-        </a> */}
- <Router>
-      <Routes>
-        {/* Other routes */}
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </Router>        <a href="#" className="sell">
+        </a>
+
+        <a href="./AdManagement" className="sell">
           +SELL
         </a>
       </div>
