@@ -1,86 +1,71 @@
 /* header.css */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
 
 .header {
-    background-color:#f7f8f8;
-    /* background-color: #002f34; Adjust the color to match your design */
-    color:  #002f34;
+    width: 135rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 20px;
-}
-
-.logo-container {
+    background-color: #f7f8f8; /* OLX's blue color */
+    color: #2e2f2f;
+  }
+  
+  .logo-container {
     display: flex;
     align-items: center;
-}
-
-.olx-logo {
-    height: 40px; /* Adjust the height as needed */
-    margin-right: 20px;
-}
-
-.categories {
-    display: flex;
-}
-
-.category {
+  }
+  
+  .olx-logo {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .black-logo {
+    display: none;
+  }
+  
+  .categories {
     display: flex;
     align-items: center;
+  }
+  
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-right: 20px;
-}
-
-.category-icon {
-    height: 20px; /* Adjust the height as needed */
-    margin-right: 5px;
-}
-
-.icontext {
-    font-size: 16px; /* Adjust the font size as needed */
-}
-
-.black-logo {
-    height: 40px; /* Adjust the height as needed */
-}
-
-.search,
-.category {
-    margin-right: 20px;
-}
-
-.user-actions a {
-    color:  #002f34;
-    margin-left: 20px;
+  }
+  
+  .category-icon {
+    width: 30px;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  .search-input,
+  .category-input {
+    flex-grow: 1;
+    margin: 0 20px;
+  }
+  
+  .user-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login,
+  .sell {
+    color: #002f34;
+    background-color: #fff; /* OLX's orange color */
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
-}
-
-
-.login{
-
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo-container {
-        margin-bottom: 10px;
-    }
-
-    .categories,
-    .search,
-    .category {
-        margin: 0;
-    }
-
-    .user-actions {
-        margin-top: 10px;
-    }
-}
+    margin-right: 10px;
+  }
+  
+  .login:hover,
+  .sell:hover {
+    background-color: #fff; /* Slightly darker orange on hover */
+  }
+  

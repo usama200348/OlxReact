@@ -7,7 +7,7 @@ import {
   import Detail from "../../views/Detail";
   import Login from "../../Login";
   import Register from "../../Register";
-//  import AdManagement from "../../AdManagement";
+ import AdManagement from "../../AdManagement";
   const router = createBrowserRouter([
     {
         path: "/",
@@ -21,12 +21,12 @@ import {
         path: "/Register",
         element: <Register />,
     },
-    // {
-    //     path: "/AdManagement",
-    //     element: <AdManagement />,
-    // },
     {
-        path: "/detail/:adId", 
+        path: "/AdManagement",
+        element: <AdManagement />,
+    },
+    {
+        path: "/detail/:uid", 
               element: <Detail />,
     }
   ]);

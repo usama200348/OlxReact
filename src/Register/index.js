@@ -23,7 +23,7 @@ function Register() {
 
   return (
     <div className="register-container">
-      <Header />
+      {/* <Header /> */}
       <div className="register-form">
         <input style={{color:'black'}}
           onChange={(e) => setFullname(e.target.value)}

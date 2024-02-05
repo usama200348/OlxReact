@@ -1,23 +1,26 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDoc,doc, setDoc  } from "firebase/firestore";
-import {getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword} from "firebase/auth"
+
+import { getFirestore, collection, getDocs,getDoc,doc,addDoc, setDoc  } from "firebase/firestore";
+import {ref, uploadBytes,getDownloadURL, getStorage} from 'firebase/storage'
+// import { getStorage,ref, uploadBytes  } from "firebase/storage";
+import {getAuth , createUserWithEmailAndPassword,onAuthStateChanged , signInWithEmailAndPassword } from "firebase/auth"
 const firebaseConfig = {
-    apiKey: "AIzaSyB1CX5zfPEh6O4CMuPLCgiZLyvkPXON3S8",
-    authDomain: "fir-authentication-d0f23.firebaseapp.com",
-    projectId: "fir-authentication-d0f23",
-    storageBucket: "fir-authentication-d0f23.appspot.com",
-    messagingSenderId: "57005092175",
-    appId: "1:57005092175:web:6673aeb9a2ce25da54293a",
-    measurementId: "G-4KEMLNXK2E"
-  };
+  apiKey: "AIzaSyDGz2rBkYNARH3duGqLn7I-84SgjADJnTc",
+  authDomain: "olxreact-c6d3e.firebaseapp.com",
+  projectId: "olxreact-c6d3e",
+  storageBucket: "olxreact-c6d3e.appspot.com",
+  messagingSenderId: "262152203358",
+  appId: "1:262152203358:web:e21d34a5362f5a729058cf",
+  measurementId: "G-540XLHJQZR"
+};  
   // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)
 const db = getFirestore(app);
-
+const storage = getStorage(app);
 
 export async function getAllProducts(){
-  const querySnapshot = await getDoc(collection(db, "ads"));
+  const querySnapshot = await getDocs(collection(db, "ads"));
   const products = []
 querySnapshot.forEach((doc) => {
   // doc.data() is never undefined for query doc snapshots
@@ -42,23 +45,44 @@ export async function login(userInfo){
   alert('Logged In Successfully')
 }
 
-export async function getSingleAd(id){
-  console.log(id)
-const docRef = doc(db, "ads", id );
-const docSnap = await getDoc(docRef);
+export async function getSingleAd(uid) {
+  console.log("My id", uid);
+  const docRef = doc(db, "ads", uid);
+  const docSnap = await getDoc(docRef);
 
-if (docSnap.exists()) {
-  console.log("Document data:", docSnap.data());
-  return docSnap.data();
-} else {
-  // docSnap.data() will be undefined in this case
-  console.log("No such document!");
+  if (docSnap.exists()) {
+    console.log("Document data:", docSnap.data());
+    return docSnap.data();
+  } else {
+    console.log("No such document!");
+    return null;
+  }
+  }
+
+
+
+export async function postAdToDb(ad) {
+  try {
+    // const adCollection = collection(db, "ads");
+    await addDoc(collection(db,"ads"), ad);
+    console.log("Ad posted successfully!");
+    alert("Ad posted successfully!");
+  } catch (error) {
+    console.error("Error posting ad:", error);
+    alert("Error posting ad. Please try again.");
+  }
 }
+
+
+
+export{
+  onAuthStateChanged, 
+  auth,
+  addDoc,
+  db,
+  storage,
+  collection,
+  ref,
+  uploadBytes,
+  getDownloadURL
 }
-
-
-
-
-
-
-

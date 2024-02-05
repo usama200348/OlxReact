@@ -2,7 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/header';
 import Cards from '../../components/Card/index';
-import { getAllProducts } from '../../components/config/apis';
+import { getAllProducts } from '../../components/config/firebase';
+import { Link as CustomLink } from '../../components/Link';
+import Footer from '../../Footer/index';
+import ImageSlider from '../../ImageSlider';
 
 function Dashboard() {
   const [products, setProducts] = useState([]);
@@ -14,8 +17,8 @@ function Dashboard() {
   const fetchData = async () => {
     try {
       const res = await getAllProducts();
-      console.log(res.products);
-      setProducts(res.products);
+      console.log(res);
+      setProducts(res);
     } catch (error) {
       console.error('Error fetching products:', error);
     }
@@ -24,25 +27,31 @@ function Dashboard() {
   if (!products.length) {
     return <div style={{ color: 'black' }}><img src='https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif' alt='loading'/> </div>;
   }
-  const { category } = products
 
   return (
     <div>
-      <Header />
+      <Header/>
+      {/* console.log(<CustomLink/>); */}
+      
+      <CustomLink/>
+      {/* <ImageSlider/> */}
       <div className="marquee-container">
         <div className="marquee-content">
           All You Want Is Available Here At an Economical Rate
         </div>
       </div>
       
-      <h3 style={{color:'black'}}>{category}</h3>
-<div className='products-map'>{products.map(item => (
-        
-        <Cards key={item.id} item={item} />
-      ))}</div>
-      
+      {products.map(item => (
+        <div key={item.id}>
+          {/* <h3 style={{ color: 'black' }}>{item.title}</h3> */}
+        <Cards item={item} />
+          
+        </div>
+      ))}
+<Footer/>
     </div>
   );
+
 }
 
-export default Dashboard;
+export default Dashboard;

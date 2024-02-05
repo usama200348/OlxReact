@@ -1,22 +1,56 @@
-/* detail.css */
-
 body {
-    color: black;
-  }
-  
-  .description {
-    display: flex;
-    color: black;
-    border: 3px solid black;
-    width: 100%;
-  }
-  
-  .library {
-    border: 3px solid black;
-    border-radius: 55px;
-  }
-  
-  .fbImages img {
-    height: 200px; /* Set the desired height */
-    width: auto; /* Maintain aspect ratio */
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.library {
+  margin: 20px 0;
+}
+
+.fbImages {
+  max-width: 100%;
+}
+
+.price {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/* .header {
+  background-color: #f7f8f8;
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+  margin-top: -13.5em;
+  width: 136rem;
+} */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading img {
+  width: 100px;
+  height: 100px;
+}
