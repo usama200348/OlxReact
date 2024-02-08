@@ -7,6 +7,8 @@ import { Link as CustomLink } from '../../components/Link';
 import Footer from '../../Footer/index';
 import ImageSlider from '../../ImageSlider';
 
+import "./dash.css"
+
 function Dashboard() {
   const [products, setProducts] = useState([]);
 
@@ -33,21 +35,21 @@ function Dashboard() {
       <Header/>
       {/* console.log(<CustomLink/>); */}
       
-      <CustomLink/>
+      <CustomLink/> 
       {/* <ImageSlider/> */}
-      <div className="marquee-container">
+      {/* <div className="marquee-container">
         <div className="marquee-content">
           All You Want Is Available Here At an Economical Rate
         </div>
-      </div>
+      </div> */}
       
-      {products.map(item => (
-        <div key={item.id}>
+      <div className='card-main' style={{marginTop:'5em'}}>{products.map(item => (
+        <div key={item.id} className="main-Card-div">
           {/* <h3 style={{ color: 'black' }}>{item.title}</h3> */}
-        <Cards item={item} />
+        <Cards item={item}   />
           
         </div>
-      ))}
+      ))}</div>
 <Footer/>
     </div>
   );

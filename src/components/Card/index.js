@@ -6,7 +6,7 @@ function Cards(props) {
   const navigate = useNavigate();
 
   return (
-    <div className="containeer">
+    // <div className="containeer">
     <div className="card" onClick={() => navigate(`detail/${id}`)}>
       <img src={props.item.image} alt={props.item.title} />
       <div className="overlay">
@@ -21,7 +21,7 @@ function Cards(props) {
         <p className="description">{props.item.description}</p>
       </div>
     </div>
-    </div>
+    // </div>
   );
 }
 

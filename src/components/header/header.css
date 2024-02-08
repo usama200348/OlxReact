@@ -38,11 +38,10 @@
   }
   
   .category-icon {
-    width: 30px;
-    height: auto;
+    width: 30px; /* Adjust width as needed */
+    height: auto; /* Automatically adjust height */
     margin-bottom: 5px;
-  }
-  
+}
   .search-input,
   .category-input {
     flex-grow: 1;

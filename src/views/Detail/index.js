@@ -35,7 +35,7 @@ function Detail() {
 
     return (
         <div>
-{/* <Header /> */}
+<Header />
             <div className='library'>
                 {/* <FbImageLibrary className='fbImages' images={image} /> */}
                 <img src={image} width={200}/>

@@ -21,11 +21,11 @@ function Header() {
         <div className='black-logo'><img className="olx-logo black-logo" src={BlackLogo} alt="OLX Logo" /></div>
         <div className="categories">
           <div className="category">
-            <img className="category-icon" src={carLogo} alt="Motors Icon" />
+            <img className="category-icon" style={{width: "25px"}}  src={carLogo} alt="Motors Icon" />
             <span className='icontext'>Motors</span>
           </div>
           <div className="category">
-            <img className="category-icon" src={propertyLogo} alt="Property Icon" />
+            <img className="category-icon" style={{width: "25px"}} src={propertyLogo} alt="Property Icon" />
             <span className='icontext'>Property</span>
           </div>
         </div>
@@ -52,7 +52,7 @@ function Header() {
       </div>
       <div className='anchor'>
       </div>
-      <img src={mobile}/>
+      {/* <img src={mobile}/> */}
     </div>
   );
 }

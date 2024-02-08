@@ -1,16 +1,65 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .container p {
-    margin-right: 5em; 
-    font-size: small;
-    color: black;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
-  .container p:hover{
-    color: lightblue;
-  }
+.container p {
+  margin-right: 5em;
+  font-size: small;
+  color: black;
+}
+
+.container p:hover {
+  color: lightblue;
+}
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex; /* Make the container a flexbox */
+  align-items: center; /* Center align its children */
+}
+
+.mobile{
+  margin-top: -56px;
+}
+
+.logo-container img {
+  width: 6em;
+}
+
+.para .mobile-p{
+  margin-top: 9em;
+  margin-left: -14em; 
+  font-weight: bold;
+}
+
+.car {
+  margin-left: 2em; /* Adjust this margin as needed */
+  margin-top: -15em;
+}
+
+.car-p{
+  margin-top: -36px;
+  font-weight: bold;
+}
+.para-p{
+  margin-top: -56px;
+  margin-right: -3em;
+  font-weight: bold;
+}
+.rent-p{
+  /* margin-top: -56px; */
+  /* width: 65px; */
+  margin-right: -3em;
+  font-weight: bold;
+}
+.property{
+  margin-top: -15em;
+  margin-left:   44px;
+}
