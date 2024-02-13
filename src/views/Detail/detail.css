@@ -34,14 +34,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* .header {
-  background-color: #f7f8f8;
-  color: #000000;
-  padding: 10px;
-  text-align: center;
-  margin-top: -13.5em;
-  width: 136rem;
-} */
+
 
 .loading {
   display: flex;
@@ -53,4 +46,9 @@ body {
 .loading img {
   width: 100px;
   height: 100px;
+}
+
+
+.addtocart{
+   width: 20em;
 }

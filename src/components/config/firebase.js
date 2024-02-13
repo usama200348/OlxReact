@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs,getDoc,doc,addDoc, setDoc  } from "firebase/firestore";
 import {ref, uploadBytes,getDownloadURL, getStorage} from 'firebase/storage'
 // import { getStorage,ref, uploadBytes  } from "firebase/storage";
-import {getAuth , createUserWithEmailAndPassword,onAuthStateChanged , signInWithEmailAndPassword } from "firebase/auth"
+import {getAuth , createUserWithEmailAndPassword,onAuthStateChanged , signInWithEmailAndPassword, signOut } from "firebase/auth"
 const firebaseConfig = {
   apiKey: "AIzaSyDGz2rBkYNARH3duGqLn7I-84SgjADJnTc",
   authDomain: "olxreact-c6d3e.firebaseapp.com",
@@ -43,6 +43,12 @@ export async function login(userInfo){
   await signInWithEmailAndPassword(auth, email, password)
 
   alert('Logged In Successfully')
+}
+
+export async function logout() {
+    return await signOut(auth)
+    alert('User Is Logged Out')
+    console.log('USer Is Logged Out');
 }
 
 export async function getSingleAd(uid) {

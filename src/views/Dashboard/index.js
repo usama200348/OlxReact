@@ -32,7 +32,7 @@ function Dashboard() {
 
   return (
     <div>
-      <Header/>
+      {/* <Header/> */}
       {/* console.log(<CustomLink/>); */}
       
       <CustomLink/> 

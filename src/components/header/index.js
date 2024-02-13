@@ -9,11 +9,17 @@ import mobile from './assets/Mobiles.png'
 import logo from './assets/olx_logo.png';
 import carLogo from './assets/electric-car.png';
 import propertyLogo from './assets/apartment.png';
+import { UseDispatch,useDispatch,useSelector } from 'react-redux';
+import {logout} from '../config/firebase'
+import { useNavigate } from 'react-router-dom';
 import BlackLogo from './assets/olx_logo_black.png';
 
-function Header() {
+function Header(user) {
   const [showSignInSignUp, setShowSignInSignUp] = useState(false);
-
+const navigate=useNavigate()
+const dispatch=useDispatch()
+const cart = useSelector(state => state.cartReducer.cart)
+console.log(cart);
   return (
     <div className="header">
       <div className="logo-container">
@@ -42,17 +48,36 @@ function Header() {
       </div>
       
       <div className="user-actions">
-        <a href='./Login' className="login" >
-          Login
-        </a>
-
-        <a href="./AdManagement" className="sell">
+      {user ?
+            <div>
+                <h3>{user.email}</h3>
+                <button className='login' onClick={logout}>Logout</button>
+            </div> :
+            <button className='login' style={{marginTop:-'30em'}} onClick={() => navigate('/login')}>Login</button>
+            
+        }
+<button className='sell' onClick={() => navigate('/AdManagement') }>+SELL</button>
+        {/* <a href="" className="sell">
           +SELL
-        </a>
+        </a> */}
+
       </div>
-      <div className='anchor'>
-      </div>
-      {/* <img src={mobile}/> */}
+      <p>{cart.length}</p>
+        <img
+            src="https://www.freeiconspng.com/uploads/green-shopping-cart-icon-5.png"
+            width="50"
+            height="50"
+        />
+
+      <div>
+            {cart.map(item => {
+                return <div>
+                    <h3>
+                        <img src={item.image} width="20" height="20" />
+                    </h3>
+                </div>
+            })}
+        </div>
     </div>
   );
 }

@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../components/config/firebase';
-import Header from '../components/header';
 import Olx from './aaset/olx_logo.png'
 function Login() {
   const navigate = useNavigate();
@@ -20,10 +19,10 @@ function Login() {
 
   return (
     <div>
-      <Header />
-      <div style={{ maxWidth: '400px', margin: 'auto', marginTop: '20px', padding: '20px', border: '1px solid #ccc' }}>
+      {/* <Header /> */}
+      <div style={{ maxWidth: '400px', margin: 'auto', marginTop: '50px',marginBottom:'30px', padding: '20px', border: '1px solid #ccc' }}>
         <img
-          src={Olx} // Replace with your OLX logo URL
+          src={Olx} 
           alt="OLX Logo"
           style={{ width: '100%', marginBottom: '20px', cursor: 'pointer' }}
           onClick={() => navigate('/')}

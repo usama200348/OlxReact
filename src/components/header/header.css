@@ -68,3 +68,32 @@
     background-color: #fff; /* Slightly darker orange on hover */
   }
   
+
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column; /* Stack items vertically */
+      align-items: stretch; /* Stretch items to full width */
+    }
+  
+    .logo-container {
+      margin-bottom: 20px; /* Add some space between logo and categories */
+    }
+  
+    .categories {
+      margin-top: 20px; /* Add space above categories */
+    }
+  
+    .category {
+      margin-right: 10px; /* Reduce margin between categories */
+    }
+  
+    .search-input,
+    .category-input {
+      margin: 10px 0; /* Adjust margin for search inputs */
+    }
+  
+    .login,
+    .sell {
+      margin-top: 10px; /* Add space between login/sell buttons */
+    }
+  }
